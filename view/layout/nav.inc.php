@@ -27,6 +27,11 @@
                     <?php if ($_GET["notif"] == 2) echo "Merci de vous être inscrit ! ";?>
                 </div>
                 <?php } ?>
+                <?php if (isset($_GET["erreur"])) { ?>
+                <div class="alert alert-success" role="alert">
+                    <?php if ($_GET["erreur"] == 1) echo "Désolé votre demande de contact a échoué ! ";?>
+                </div>
+                <?php } ?>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
