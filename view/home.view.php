@@ -1,5 +1,6 @@
 <!-- Home view -->
 
+<!-- Permet d'inclure l'affichage de la barre de navigation et du header -->
 <?php include("view/layout/nav.inc.php"); ?>
 <?php include("view/layout/header.inc.php"); ?>
 
@@ -8,9 +9,10 @@
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
 
+            <!-- Pour chaque donnée $data l'attribué à $onedata -->
             <?php foreach ($data as $onedata) { ?>
 
-                <!-- Post preview-->
+                <!-- Post preview - Donne un paramètre different grace a la boucle dans l'url de chaque articles et affiche titre, contenu et un image correspondant -->
                 <div class="post-preview">
                     <a href="post.php?article=<?= $onedata["post_ID"] ?>">
                         <h2 class="post-title"><?= $onedata["post_title"] ?></h2>
@@ -38,5 +40,5 @@
         </div>
     </div>
 </div>
-
+<!-- Permet d'inclure un bas de page contenu dans le fichier footer.inc.php -->
 <?php include("view/layout/footer.inc.php"); ?>

@@ -2,9 +2,12 @@
 
 // Home model
 
+// permet d'inclure la configuration de la base de donnée
 include("config/config.inc.php");
+// permet de faire le lien dans les fichiers php avec la base de donnée mysql
 include("model/pdo.inc.php");
 
+// permet d'executer une series de requettes SQL pour récupérer des données de la base de donnée en faisant une jointure entre deux tables blog_users et blog_categories
 try {
     $query = "
     SELECT post_img_url, post_ID, post_date, LEFT(post_content, " . TRONCATURE . ") AS post_content, post_title, display_name, cat_descr 
@@ -24,10 +27,12 @@ try {
 
     $data = $req->fetchAll();
 
-} catch(Exception $e) {
+} // catch permet de récupérer les erreurs si les instructions de try ont une erreur
+ catch(Exception $e) {
     die("Erreur MySQL : " . $e->getMessage());
 }
 
+// la variable $bg recupère une image, header_title recupère une chaine de caractère permetant d'afficher le titre h1 dans le header.view.php, de même que header_subtitle 
 $bg = 'assets/img/home-bg.jpg';
 $header_title = 'Blog de surf';
 $header_subtitle = 'Le meilleur sport de glisse !';

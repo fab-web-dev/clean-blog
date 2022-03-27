@@ -4,11 +4,13 @@
 //die($_GET['article']);
 //echo($_GET['article']);
 
-// Ce controller doit recevoir un parametre article
+// Si la variable $_GET["article"] n'est pas paramètrer, die interrompte le processus et affiche une page avec le text "Manque paramètre"
 if (!isset($_GET["article"])) {
     die("Manque paramètre !");
 }
+// charge le fichier post1.model.php
 include("model/post1.model.php"); 
+
 
 $bg = $data['post_img_url'];
 $layout_title = $data["post_title"];

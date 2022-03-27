@@ -1,5 +1,7 @@
 <?php
 
+// permet d'accèder à la base de donnée mysql en définissant le domaine et le nom de la base de donnée.
+// 
 try {
 
     $dns = 'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME;

@@ -18,7 +18,7 @@
                     <!-- to get an API token!-->
                     <form id="contactForm" action="contact.add.php" method="post">
                         <div class="form-floating">
-                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required maxlength="25"/>
+                            <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required maxlength="25" />
                             <label for="name">Nom</label>
                             <div class="invalid-feedback" data-sb-feedback="name:required">Le nom est obligatoire.</div>
                         </div>
@@ -29,7 +29,7 @@
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
                         <div class="form-floating">
-                            <input class="form-control" id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Enter your phone number..." required />
+                            <input class="form-control" id="phone" name="phone" type="tel" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" placeholder="Enter your phone number..." required />
                             <label for="phone">Phone Number</label>
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                         </div>
